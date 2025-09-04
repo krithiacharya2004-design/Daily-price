@@ -5,24 +5,8 @@ import numpy as np
 
 # Load the trained model
 # Make sure the path to your joblib file is correct
-try:
     model = joblib.load('daily_price_model.joblib')
-    st.success("Model loaded successfully!")
-except FileNotFoundError:
-    st.error("Model file not found. Please make sure 'daily_price_model.joblib' is in the correct path (/content/).")
-    st.stop() # Stop the app if the model is not found
-
-
-try:
-    # Assuming X_train is a global variable from the previous notebook state
-    feature_columns = X_train.columns.tolist()
-    st.success(f"Loaded {len(feature_columns)} feature columns from X_train.")
-except NameError:
-    st.error("X_train not found. Please run the data preprocessing and splitting steps first.")
-    st.stop()
-
-
-# App title
+   
 st.title('Daily Price Prediction App')
 
 st.write("""

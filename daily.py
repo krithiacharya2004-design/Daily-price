@@ -6,7 +6,7 @@ import numpy as np
 # Load the trained model
 # Make sure the path to your joblib file is correct
 try:
-    model = joblib.load('/content/daily_price_model.joblib')
+    model = joblib.load('daily_price_model.joblib')
     st.success("Model loaded successfully!")
 except FileNotFoundError:
     st.error("Model file not found. Please make sure 'daily_price_model.joblib' is in the correct path (/content/).")
